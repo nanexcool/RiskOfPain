@@ -40,7 +40,7 @@ namespace RiskOfPain
         /// </summary>
         protected override void Initialize()
         {
-            // Initialize Utils for blank texture
+            // Initialize Utils
             Util.Initialize(this);
 
             map = new Map(40, 200);

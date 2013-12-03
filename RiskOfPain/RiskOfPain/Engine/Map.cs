@@ -36,6 +36,12 @@ namespace RiskOfPain.Engine
                 }
             }
 
+            for (int i = 20; i < 40; i++)
+            {
+                Tiles[i + 18 * Width].Color = Color.Blue;
+            }
+            
+
             Player = new Player();
             Player.Position = new Vector2(10 * Tile.Size + Tile.Size / 2, 4 * Tile.Size + Tile.Size / 2);
             Entities.Add(Player);

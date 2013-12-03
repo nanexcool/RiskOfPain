@@ -10,7 +10,7 @@ namespace RiskOfPain.Engine
 {
     abstract class Entity
     {
-        protected bool OnGround = false;
+        public bool OnGround { get; set; }
 
         protected Vector2 position;
         protected Vector2 velocity;

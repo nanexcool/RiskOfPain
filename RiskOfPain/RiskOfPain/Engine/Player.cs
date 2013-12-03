@@ -25,14 +25,14 @@ namespace RiskOfPain.Engine
         public override void OnCollide(Entity e)
         {
             //base.OnCollide(e);
-            if (e is Enemy && hurtTimer <= 0)
+            if (e is Enemy)
             {
-                Vector2 hurt = position - e.Position;
-                hurt.Normalize();
-                velocity += hurt * 100;
-                Health--;
-                hurtTimer += 1;
-                Console.WriteLine(Health);
+                velocity *= -100;
+                if (hurtTimer <= 0)
+                {
+                    Health--;
+                    hurtTimer += 1;
+                }
             }
         }
 
@@ -44,7 +44,6 @@ namespace RiskOfPain.Engine
             }
 
             base.Update(elapsed);
-            Console.WriteLine(position);
         }
 
         public override void Draw(SpriteBatch spriteBatch)

@@ -10,7 +10,7 @@ namespace RiskOfPain.Engine
 {
     struct Tile
     {
-        public const int Size = 32;
+        public const int Size = 64;
         public Color Color { get; set; }
     }
 }
